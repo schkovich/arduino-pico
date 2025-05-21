@@ -51,7 +51,8 @@ if (${cpu} MATCHES "rp2040")
         PICO_XOSC_STARTUP_DELAY_MULTIPLIER=64
         PICO_FLOAT_SUPPORT_ROM_V1=1
         PICO_DOUBLE_SUPPORT_ROM_V1=1
-        PICO_RP2040=1)
+        PICO_RP2040=1
+        LIB_PICO_MULTICORE=1)
 elseif (${cpu} MATCHES "rp2350")
     set(xcd
         CFG_TUSB_DEBUG=0
