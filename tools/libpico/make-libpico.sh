@@ -11,7 +11,10 @@ export PATH="$(cd ../../system/picotool; pwd):$PATH"
 rm -rf build-rp2040
 mkdir build-rp2040
 cd build-rp2040
-CPU=rp2040 cmake ..
+CPU=rp2040 cmake \
+          -DPICO_STDIO_UART=1 \
+          -DPICO_STDIO_USB=0 \
+          ..
 make -j
 
 rm -rf boot
